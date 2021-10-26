@@ -6,11 +6,11 @@
 /*   By: ycarro <ycarro@student.42madrid.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/19 10:19:31 by ycarro            #+#    #+#             */
-/*   Updated: 2021/10/21 12:55:32 by ycarro           ###   ########.fr       */
+/*   Updated: 2021/10/26 11:38:17 by ycarro           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/so_long.h"
+#include "so_long.h"
 
 int		getmap(void *load, char *map);
 void	msize(void *load, char *map);
@@ -45,6 +45,8 @@ void	msize(void *load, char *map)
 	{
 		program->window.height++;
 		err = countln (load, line, program->window.height, file);
+		free(line);
+		line = NULL;
 		line = get_next_line(file);
 	}
 	if (err)
@@ -104,6 +106,9 @@ void	draw(void *load)
 			pos.x += 100;
 		}
 		pos.y += 100;
+		line -= (pos.x / 100);
+		free(line);
+		line = NULL;
 		line = get_next_line(program->map.ptr);
 	}
 	close (program->map.ptr);

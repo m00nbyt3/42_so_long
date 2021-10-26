@@ -6,12 +6,12 @@
 /*   By: ycarro <ycarro@student.42madrid.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/24 17:02:23 by ycarro            #+#    #+#             */
-/*   Updated: 2021/10/22 13:14:09 by ycarro           ###   ########.fr       */
+/*   Updated: 2021/10/25 13:56:30 by ycarro           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_SO_LONG_H
-# define FT_SO_LONG_H
+#ifndef SO_LONG_H
+# define SO_LONG_H
 
 //Header files
 # include <stdlib.h>
@@ -20,7 +20,6 @@
 # include <unistd.h>
 # include "mlx.h"
 # include "../gnl/get_next_line.h"
-
 
 //Structs
 typedef struct s_vector
@@ -42,8 +41,8 @@ typedef struct s_env
 
 typedef struct s_map
 {
-	int	ptr;
-	int	**wall;
+	int			ptr;
+	int			**wall;
 	t_vector	exit;
 	t_vector	size;
 }			t_map;
@@ -53,14 +52,14 @@ typedef struct s_window
 	void	*ptr;
 	int		width;
 	int		height;
-	char 	*name;
+	char	*name;
 }			t_window;
 
 typedef struct s_status
 {
-	int pcount;
-	int ccount;
-	int ecount;
+	int	pcount;
+	int	ccount;
+	int	ecount;
 }			t_status;
 
 typedef struct s_program

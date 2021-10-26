@@ -6,11 +6,11 @@
 /*   By: ycarro <ycarro@student.42madrid.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/19 10:12:01 by ycarro            #+#    #+#             */
-/*   Updated: 2021/10/25 10:34:49 by ycarro           ###   ########.fr       */
+/*   Updated: 2021/10/26 11:39:37 by ycarro           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/so_long.h"
+#include "so_long.h"
 
 void	b_init(void *load);
 int		keyp(int keycode, void *load);

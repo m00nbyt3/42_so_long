@@ -6,11 +6,11 @@
 /*   By: ycarro <ycarro@student.42madrid.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/19 10:16:18 by ycarro            #+#    #+#             */
-/*   Updated: 2021/10/19 13:14:27 by ycarro           ###   ########.fr       */
+/*   Updated: 2021/10/26 11:39:15 by ycarro           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/so_long.h"
+#include "so_long.h"
 
 int		impact(void *load, char dir, int next);
 void	set_cols(void *load);

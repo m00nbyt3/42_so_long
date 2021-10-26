@@ -6,11 +6,11 @@
 /*   By: ycarro <ycarro@student.42madrid.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/19 10:18:00 by ycarro            #+#    #+#             */
-/*   Updated: 2021/10/20 15:21:42 by ycarro           ###   ########.fr       */
+/*   Updated: 2021/10/26 11:39:32 by ycarro           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/so_long.h"
+#include "so_long.h"
 
 void	plmove(void *load, int *mov, char dir);
 void	kill(void *load);

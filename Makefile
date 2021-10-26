@@ -6,7 +6,7 @@
 #    By: ycarro <ycarro@student.42madrid.com>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/10/21 10:56:40 by ycarro            #+#    #+#              #
-#    Updated: 2021/10/21 12:21:38 by ycarro           ###   ########.fr        #
+#    Updated: 2021/10/26 11:43:17 by ycarro           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,6 +14,10 @@ NAME := so_long
 GNL_NAME := gnl.a
 MLX_NAME := mlx.h
 
+CC = gcc
+
+IDIR = include/
+INCLUDE = -I $(IDIR)
 HEADERFILES :=	include/so_long.h
 GNL_HEADERFILES := gnl/get_next_line.h
 
@@ -30,21 +34,21 @@ SRCFILES :=	collisions.c \
 
 OBJFILES := $(SRCFILES:%.c=obj/%.o)
 
-CFLAGS ?= -Wall -Wextra -Werror -lmlx -framework OpenGL -framework AppKit
-LDFLAGS ?= -c
+LDFLAGS =  -lmlx -framework OpenGL -framework AppKit
+CFLAGS = -Wall -Wextra -Werror $(INCLUDE)
 
 all: $(NAME)
 
 $(NAME): $(OBJFILES)
-		$(CC) $(CFLAGS) $(OBJFILES) -o $@
+		$(CC) $(CFLAGS) $(LDFLAGS) $(OBJFILES) -o $@
 
 obj/%.o: src/%.c $(HEADERFILES)
 		@mkdir -p $(dir $@)
-		$(CC) $(LDFLAGS) -o $@ $<
+		$(CC) $(CFLAGS) -o $@ -c $<
 
 obj/%.o: gnl/%.c $(GNL_HEADERFILES)
 		@mkdir -p $(dir $@)
-		$(CC) $(LDFLAGS) -o $@ $<
+		$(CC) $(CFLAGS) -o $@ -c $<
 
 clean:
 		rm -f $(OBJFILES)

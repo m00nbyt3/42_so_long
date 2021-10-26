@@ -6,11 +6,11 @@
 /*   By: ycarro <ycarro@student.42madrid.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/19 10:47:27 by ycarro            #+#    #+#             */
-/*   Updated: 2021/10/20 13:36:37 by ycarro           ###   ########.fr       */
+/*   Updated: 2021/10/25 14:16:46 by ycarro           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/so_long.h"
+#include "so_long.h"
 
 void	d_wall(void *load, int x, int y);
 void	d_space(void *load, int x, int y);

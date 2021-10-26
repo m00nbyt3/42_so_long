@@ -6,11 +6,11 @@
 /*   By: ycarro <ycarro@student.42madrid.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/19 12:24:44 by ycarro            #+#    #+#             */
-/*   Updated: 2021/10/20 17:29:16 by ycarro           ###   ########.fr       */
+/*   Updated: 2021/10/26 11:38:54 by ycarro           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/so_long.h"
+#include "so_long.h"
 
 void	parseargs(int argc, char **file);
 void	argsfail(char c, int pos);

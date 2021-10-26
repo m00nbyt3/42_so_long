@@ -6,11 +6,11 @@
 /*   By: ycarro <ycarro@student.42madrid.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/24 17:01:19 by ycarro            #+#    #+#             */
-/*   Updated: 2021/10/20 16:46:15 by ycarro           ###   ########.fr       */
+/*   Updated: 2021/10/26 11:39:25 by ycarro           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/so_long.h"
+#include "so_long.h"
 
 int	main(int argc, char **argv)
 {
