@@ -6,7 +6,7 @@
 #    By: ycarro <ycarro@student.42madrid.com>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/10/21 10:56:40 by ycarro            #+#    #+#              #
-#    Updated: 2021/10/26 11:43:17 by ycarro           ###   ########.fr        #
+#    Updated: 2021/10/29 11:52:24 by ycarro           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -40,7 +40,7 @@ CFLAGS = -Wall -Wextra -Werror $(INCLUDE)
 all: $(NAME)
 
 $(NAME): $(OBJFILES)
-		$(CC) $(CFLAGS) $(LDFLAGS) $(OBJFILES) -o $@
+		$(CC) $(LDFLAGS) $(OBJFILES) -o $@
 
 obj/%.o: src/%.c $(HEADERFILES)
 		@mkdir -p $(dir $@)
